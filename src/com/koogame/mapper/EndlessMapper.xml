@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.koogame.mapper.EndlessMapper">
+
+	  <select id="findEndlessByImei" parameterType="String" resultType="Endless">
+	     SELECT e.*,u.name as name FROM t_endless e ,t_user u WHERE u.uid = e.uid AND u.imei =  #{imei}
+	  </select>
+	  
+	  
+	  <select id="findEndlessByRank" parameterType="int" resultType="Endless">
+	     SELECT e.*,u.name as name FROM t_endless e ,t_user u WHERE u.uid = e.uid AND e.rank =  #{rank}
+	  </select>
+	  
+</mapper> 

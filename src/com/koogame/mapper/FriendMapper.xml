@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.koogame.mapper.FriendMapper">
+
+	  <select id="findRandomFuidByLevel" parameterType="Search" resultType="int">
+	     <![CDATA[ SELECT uid FROM t_user_detail WHERE LEVEL >= #{level}-3 OR LEVEL <=#{level}+3  ORDER BY id LIMIT ${start},${limit}]]> 
+	  </select> 
+	  
+	  
+	  <select id="findUserFriendByUid" parameterType="int" resultType="Friend">
+	      SELECT * FROM t_user_friend WHERE uid = #{uid}
+	  </select>
+	  
+	  <select id="findUserDetailByFuid" parameterType="int" resultMap="getFUserDetailResult">
+	      SELECT * FROM t_user_detail WHERE uid = #{uid}
+	  </select>
+	  <resultMap type="UserDetail" id="getFUserDetailResult">
+	      <result property="uid" column="uid" /> 
+	      <result property="hero" column="hero" /> 
+	      <result property="name" column="name" /> 
+	      <result property="level" column="level" />
+	      <result property="progress" column="progress" />
+	      <result property="exp" column="exp" />
+	      <result property="gold" column="gold" />
+	      <result property="gem" column="gem" />
+	      <collection property="elist" ofType="Equipment" column="uid" select="findFUserEquipment" /> 
+	      <collection property="alist" ofType="Ability" column="uid" select="findFUserAbility" /> 
+	      <collection property="slist" ofType="Solider" column="uid" select="findFUserSolider" /> 
+	  </resultMap>
+	  <select id="findFUserEquipment" parameterType="int" resultType="Equipment">
+	     SELECT * FROM t_user_equipment WHERE uid = #{uid}
+	  </select> 
+	  <select id="findFUserAbility" parameterType="int" resultType="Ability">
+	     SELECT * FROM t_user_ability WHERE uid = #{uid}
+	  </select> 
+	  <select id="findFUserSolider" parameterType="int" resultType="Solider">
+	     SELECT * FROM t_user_solider WHERE uid = #{uid}
+	  </select>
+	  
+	  
+	    
+	  <update id="requestOperation" parameterType="Mail">
+	       UPDATE t_friend_log SET opened = true,accept = #{accept} WHERE id = #{id};
+	  </update>
+ 
+</mapper> 

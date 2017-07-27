@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.koogame.mapper.UserMapper">
+
+	  <select id="findUserId" parameterType="String" resultType="User">
+	     SELECT * FROM t_user WHERE imei = #{imei}
+	  </select>
+	  
+	  <select id="findUserDetailByUid" parameterType="int" resultMap="getUserDetailResult">
+	      SELECT * FROM t_user_detail WHERE uid = #{uid}
+	  </select>
+	  <resultMap type="UserDetail" id="getUserDetailResult">
+	      <result property="uid" column="uid" /> 
+	      <result property="hero" column="hero" /> 
+	      <result property="name" column="name" /> 
+	      <result property="level" column="level" />
+	      <result property="progress" column="progress" />
+	      <result property="exp" column="exp" />
+	      <result property="gold" column="gold" />
+	      <result property="gem" column="gem" />
+	      <collection property="elist" ofType="Equipment" column="uid" select="findUserEquipment" /> 
+	      <collection property="alist" ofType="Ability" column="uid" select="findUserAbility" /> 
+	      <collection property="slist" ofType="Solider" column="uid" select="findUserSolider" /> 
+	  </resultMap>
+	  <select id="findUserEquipment" parameterType="int" resultType="Equipment">
+	     SELECT * FROM t_user_equipment WHERE uid = #{uid}
+	  </select> 
+	  <select id="findUserAbility" parameterType="int" resultType="Ability">
+	     SELECT * FROM t_user_ability WHERE uid = #{uid}
+	  </select> 
+	  <select id="findUserSolider" parameterType="int" resultType="Solider">
+	     SELECT * FROM t_user_solider WHERE uid = #{uid}
+	  </select>
+	  
+	  
+	  <select id="findUserByName" parameterType="String" resultMap="friendUserEquip">
+	     SELECT * FROM t_user_detail WHERE name = #{name}
+	  </select>
+	 
+	  <resultMap type="UserDetail" id="friendUserEquip">
+	      <result property="uid" column="uid" /> 
+	      <result property="hero" column="hero" /> 
+	      <result property="name" column="name" /> 
+	      <result property="level" column="level" />
+	      <collection property="equiplist" ofType="Equipment" column="uid" select="findUserEquipment" /> 
+	  </resultMap>
+	  
+	 
+	  
+	  <insert id="addUser" useGeneratedKeys="true" keyProperty="uid" parameterType="User">
+	     INSERT INTO 
+	     t_user(name,dt,channel,chnum,imei,device,os,osversion,gversion,net,ad)  
+	     VALUES(#{name},#{dt},#{channel},#{chnum},#{imei},#{device},#{os},#{osversion},#{gversion},#{net},#{ad});
+	  </insert>
+	  
+	  
+	  <select id="isUserAdded" parameterType="int" resultType="UserDetail">
+	     SELECT * FROM t_user_detail WHERE uid = #{uid}
+	  </select>
+	  
+	  <insert id="addUserProperty" parameterType="UserDetail" >
+	     INSERT INTO 
+	     t_user_detail(uid,name,hero,progress,level,exp,gold,gem)  
+	     VALUES(#{uid},#{name},#{hero},#{progress},#{level},#{exp},#{gold},#{gem});
+	  </insert>
+	  
+	  <update id="updateUser" parameterType="UserDetail" >
+	      UPDATE t_user_detail 
+	      SET hero = #{hero},progress = #{progress},level = #{level},exp = #{exp},gold = #{gold},gold = #{gem} 
+	      WHERE uid = #{uid};
+	  </update>
+	  
+	  <insert id="addUserAbility" parameterType="Ability" >
+	     INSERT INTO 
+	     t_user_ability(uid,ability,level)  
+	     VALUES(#{uid},#{ability},#{level});
+	  </insert>
+	  
+	  <delete id="delUserAbility" parameterType="int">
+	     DELETE FROM t_user_ability WHERE uid = #{uid} 
+	  </delete>
+	  
+	   <insert id="addUserSolider" parameterType="Solider" >
+	     INSERT INTO 
+	     t_user_solider(uid,solider,level)  
+	     VALUES(#{uid},#{solider},#{level});
+	  </insert>
+	  
+	  <delete id="delUserSolider" parameterType="int">
+	     DELETE FROM t_user_solider WHERE uid = #{uid} 
+	  </delete>
+	  
+	   <insert id="addUserEquip" parameterType="Equipment" >
+	     INSERT INTO 
+	     t_user_equipment(uid,type,id,lvl)  
+	     VALUES(#{uid},#{type},#{id},#{lvl});
+	  </insert>
+	  
+	  <delete id="delUserEquip" parameterType="int">
+	     DELETE FROM t_user_equipment WHERE uid = #{uid} 
+	  </delete>
+	  
+	  <select id="findUserMail" parameterType="int" resultType="Mail">
+	     SELECT * FROM t_friend_log WHERE fuid = #{uid} AND opened = false
+	  </select>
+  
+	 
+</mapper> 
