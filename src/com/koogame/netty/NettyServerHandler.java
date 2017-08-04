@@ -19,21 +19,10 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message>	{
 		if (msg == null) {   
             return;  
         }  
-		System.out.println("-----------------channelRead0-----------------------"); 
+		Channel incoming = ctx.channel();
+		incoming.writeAndFlush(msg);
 	} 
-	
-	
-	
-	@Override
-	public void channelRead(ChannelHandlerContext ctx, Object msg)
-			throws Exception {
-		// TODO Auto-generated method stub
-		super.channelRead(ctx, msg);
-		System.out.println("-----------------msg channelRead-----------------------"); 
-	}
-
-
-
+	 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		// TODO Auto-generated method stub

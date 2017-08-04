@@ -24,6 +24,6 @@ public class NettyServerEncoder extends MessageToByteEncoder<Message> {
         out.writeInt(msg.getTypeId()); 	//类型ID
         out.writeInt(msg.getMsgId()); 	//消息ID
         out.writeInt(msg.getLength()); 	//消息长度
-        out.writeBytes(msg.getBody());  //消息内容 
+        out.writeBytes(msg.getBody());  //消息内容  
 	} 
 }

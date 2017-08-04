@@ -43,9 +43,7 @@ public class NettyServerDecoder extends LengthFieldBasedFrameDecoder {
         message.setLength(in.readInt()); 
         byte[] data = new byte[in.readableBytes()]; 
         in.readBytes(data);  
-        message.setBody(data);
-//        Person person = MsgProtocol.Person.getDefaultInstance().getParserForType().parseFrom(data);   
-        System.out.println(message.toString()); 
+        message.setBody(data); 
     
         return message;
     }
