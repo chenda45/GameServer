@@ -1,75 +1,62 @@
 package com.koogame.netty;
+
+
+import java.nio.ByteOrder;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.koogame.bean.Message;
+import com.koogame.protocol.MsgProtocol;
+import com.koogame.protocol.MsgProtocol.Person;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.ByteToMessageDecoder;
-import java.util.List;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 
-import org.apache.poi.util.SystemOutLogger;
-
-import com.google.protobuf.MessageLite;
-
-/**
- * 参考ProtobufVarint32FrameDecoder 和 ProtobufDecoder
- */
-
-public class NettyServerDecoder extends ByteToMessageDecoder {
-
-    @Override
-    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
-    	System.out.println("#####################decode");
-        while (in.readableBytes() > 4) { // 如果可读长度小于包头长度，退出。 
-            in.markReaderIndex();
-
-            // 获取包头中的body长度
-            byte low = in.readByte();
-            byte high = in.readByte();
-            short s0 = (short) (low & 0xff);
-            short s1 = (short) (high & 0xff);
-            s1 <<= 8;
-            short length = (short) (s0 | s1);
-
-            // 获取包头中的protobuf类型
-            in.readByte();
-            byte dataType = in.readByte();
-
-            // 如果可读长度小于body长度，恢复读指针，退出。
-            if (in.readableBytes() < length) {
-                in.resetReaderIndex();
-                return;
-            }
-
-            // 读取body
-            ByteBuf bodyByteBuf = in.readBytes(length);
-
-            byte[] array;
-            int offset;
-
-            int readableLen= bodyByteBuf.readableBytes();
-            if (bodyByteBuf.hasArray()) {
-                array = bodyByteBuf.array();
-                offset = bodyByteBuf.arrayOffset() + bodyByteBuf.readerIndex();
-            } else {
-                array = new byte[readableLen];
-                bodyByteBuf.getBytes(bodyByteBuf.readerIndex(), array, 0, readableLen);
-                offset = 0;
-            }
-            
-            //反序列化
-            MessageLite result = decodeBody(dataType, array, offset, readableLen);
-            out.add(result);
-        }
+public class NettyServerDecoder extends LengthFieldBasedFrameDecoder {
+    
+    //判断传送客户端传送过来的数据是否按照协议传输，头部信息的大小应该是 byte+byte+int = 1+1+4 = 6
+	private static final int HEADER_SIZE = 6;  
+	
+    @Autowired
+	public Message message;
+    
+    /** 
+     *  
+     * @param maxFrameLength 解码时，处理每个帧数据的最大长度 
+     * @param lengthFieldOffset 该帧数据中，存放该帧数据的长度的数据的起始位置 
+     * @param lengthFieldLength 记录该帧数据长度的字段本身的长度 
+     * @param lengthAdjustment 修改帧数据长度字段中定义的值，可以为负数 
+     * @param initialBytesToStrip 解析的时候需要跳过的字节数 
+     * @param failFast 为true，当frame长度超过maxFrameLength时立即报TooLongFrameException异常，为false，读取完整个帧再报异常 
+     */  
+    public NettyServerDecoder() {
+		super(1024*1024,8,4,0,0, false);
+	}
+ 
+	@Override
+    protected Object decode(ChannelHandlerContext ctx, ByteBuf in) throws Exception {
+		
+		Message message = new Message();
+        message.setTypeId(in.readInt()); 
+        message.setMsgId(in.readInt()); 
+        message.setLength(in.readInt()); 
+        byte[] data = new byte[in.readableBytes()]; 
+        in.readBytes(data);  
+        message.setBody(data);
+//        Person person = MsgProtocol.Person.getDefaultInstance().getParserForType().parseFrom(data);   
+        System.out.println(message.toString()); 
+    
+        return message;
     }
 
-    public MessageLite decodeBody(byte dataType, byte[] array, int offset, int length) throws Exception {
-//        if (dataType == 0x00) {
-//            return StockTickOuterClass.StockTick.getDefaultInstance().
-//                    getParserForType().parseFrom(array, offset, length);
-//
-//        } else if (dataType == 0x01) {
-//            return OptionTickOuterClass.OptionTick.getDefaultInstance().
-//                    getParserForType().parseFrom(array, offset, length);
-//        }
+	public Message getMessage() {
+		return message;
+	}
 
-        return null; // or throw exception
-    }
+	public void setMessage(Message message) {
+		this.message = message;
+	}
+	 
+
 }

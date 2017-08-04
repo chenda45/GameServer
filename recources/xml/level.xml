@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<levelConfig>
+    <!-- 区域编号：   1        2      3     4
+	levelType关卡类型 1：普通 2：神识 3：隐藏
+        关卡编号 分段 100~~ ，200~~，300~~，400~~
+     -->
+    <level ID="1101" areaID="1" name="张铁" intro="张铁是一起加入七玄门的师兄弟，同在墨大夫门下学习，经常切磋能更快的提升。" enemyID="1" element1="100"  element2="100"
+           element3="100" element4="100" element5="100" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="1"
+           stoneCoinGet="21" jadeCoinGet="0" levelType="1">
+
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11110001" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+
+    <level ID="1102" areaID="1" name="厉飞雨" intro="厉飞雨是师兄弟中的佼佼者，人前一本正经，人后就是一个泼皮无赖" enemyID="2" element1="100"  element2="100"
+           element3="100" element4="10" element5="100" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="1"
+           stoneCoinGet="22" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11110001" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+        <itemDrop itemID="11210001" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1103" areaID="1" name="墨大夫" intro="没想到墨大夫居然是想教导出有修仙根骨的弟子后，对弟子夺舍，成就他的修仙之路。" enemyID="3" element1="100"  element2="100"
+           element3="100" element4="10" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="1"
+           stoneCoinGet="23" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11210001" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+        <itemDrop itemID="11310001" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+    <level ID="1104" areaID="1" name="余子童" intro="余子童之前被墨大夫算计，失了肉身，他挑唆墨大夫夺舍，方便他的阴谋。" enemyID="4" element1="30"  element2="100"
+           element3="100" element4="100" element5="80" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="2"
+           stoneCoinGet="24" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11310001" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+        <itemDrop itemID="11410001" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1105" areaID="1" name="神秘男子" intro="一直跟随墨大夫的神秘男子，背影有一种很熟悉的感觉，似乎在哪里见过。" enemyID="5" element1="100"  element2="100"
+           element3="100" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="2"
+           stoneCoinGet="25" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11410001" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+        <itemDrop itemID="11510001" itemRate="0.05"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1106" areaID="1" name="铁枪会员" intro="铁枪会一个小小的帮派，居然也敢来挑衅七玄门。" enemyID="6" element1="20"  element2="100"
+           element3="100" element4="105" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="3"
+           stoneCoinGet="26" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11510001" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1107" areaID="1" name="断水门徒" intro="断水门，哼，找死！" enemyID="7" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="3"
+           stoneCoinGet="27" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11110002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1108" areaID="1" name="野狼帮众1" intro="神秘男子居然是一起入门的师兄弟张铁，结果被墨大夫炼成了没有灵魂的杀人机器。" enemyID="8" element1="20"  element2="40"
+           element3="30" element4="105" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="4"
+           stoneCoinGet="28" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11210002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1109" areaID="1" name="野狼帮众2" intro="野狼帮围攻七玄门，在山下布下了重重埋伏。" enemyID="9" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="4"
+           stoneCoinGet="29" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11310002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1110" areaID="1" name="野狼帮众3" intro="上山的路上还有很多野狼帮众。" enemyID="10" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="4"
+           stoneCoinGet="30" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11410002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1111" areaID="1" name="野狼帮众4" intro="一大波野狼帮众袭来，虽然不是很厉害，但是很烦人啊。" enemyID="11" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="5"
+           stoneCoinGet="31" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11510002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1112" areaID="1" name="红衣铁卫1" intro="野狼帮的秘密武器，装备精良，武功精湛。" enemyID="12" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="5"
+           stoneCoinGet="32" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11210002" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1113" areaID="1" name="红衣铁卫2" intro="又是一波红衣铁卫。" enemyID="13" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="5"
+           stoneCoinGet="33" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11310002" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1114" areaID="1" name="红衣铁卫3" intro="红衣铁卫，红衣铁卫，红衣铁卫，还是红衣铁卫。" enemyID="14" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="6"
+           stoneCoinGet="34" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11410002" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1115" areaID="1" name="贾天龙" intro="阴险卑鄙的贾天龙，哪里跑！居然妄想野狼帮能灭了七玄门？" enemyID="15" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="6"
+           stoneCoinGet="35" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11510002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+        <itemDrop itemID="11110002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1116" areaID="1" name="金光上人" intro="这还是碰到的第一个修仙者，只不过长得一点都不像修仙者" enemyID="16" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="0" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="2" killExpGet="8"
+           stoneCoinGet="50" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="33200001" itemRate="0.5"  itemNumMin="1" itemNumMax="1" itemType="3"/>
+    </level>
+
+
+    <level ID="1201" areaID="1" name="红衣铁卫1" intro="野狼帮的秘密武器，装备精良，武功精湛。" enemyID="12" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="10" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="2" killExpGet="5"
+           stoneCoinGet="46" jadeCoinGet="0" levelType="2">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11210002" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1202" areaID="1" name="红衣铁卫2" intro="又是一波红衣铁卫。" enemyID="13" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="11" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="2" killExpGet="5"
+           stoneCoinGet="48" jadeCoinGet="0" levelType="2">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11310002" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1203" areaID="1" name="红衣铁卫3" intro="红衣铁卫，红衣铁卫，红衣铁卫，还是红衣铁卫。" enemyID="14" element1="20"  element2="40"
+           element3="15" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="13" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="2" killExpGet="6"
+           stoneCoinGet="50" jadeCoinGet="0" levelType="2">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11410002" itemRate="0.2"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1204" areaID="1" name="贾天龙" intro="阴险卑鄙的贾天龙，哪里跑！居然妄想野狼帮能灭了七玄门？" enemyID="15" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="15" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="2" killExpGet="6"
+           stoneCoinGet="54" jadeCoinGet="0" levelType="2">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11510002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+        <itemDrop itemID="11110002" itemRate="0.1"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+
+    <level ID="1205" areaID="1" name="金光上人" intro="这还是碰到的第一个修仙者，只不过长得一点都不像修仙者" enemyID="16" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="17" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="3" killExpGet="8"
+           stoneCoinGet="58" jadeCoinGet="0" levelType="2">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="33200001" itemRate="0.5"  itemNumMin="1" itemNumMax="1" itemType="3"/>
+    </level>
+
+
+
+    <level ID="2101" areaID="2" name="影猫" intro="这家伙的动作挺快的，奔跑起来只能看到一道残影" enemyID="17" element1="20"  element2="40"
+           element3="30" element4="25" element5="60" soulCost="1" jadeCoinCost="10"
+
+           soulNeed="20" completeMaxPerDay="10" completePerUnlock="1"
+           unlockType1="0" unlockID1="0" unlockNum1="0" unlockType2="0"
+           unlockID2="0" unlockNum2="0"
+
+           exerciseExpGet="1" killExpGet="6"
+           stoneCoinGet="40" jadeCoinGet="0" levelType="1">
+
+        <!--itemType:1 装备 2.秘籍 3.道具-->
+        <itemDrop itemID="11510002" itemRate="0.5"  itemNumMin="1" itemNumMax="1" itemType="1"/>
+    </level>
+
+</levelConfig>

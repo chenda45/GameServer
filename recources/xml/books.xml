@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2013.
+  ~ 游戏服务器核心代码编写人陈磊拥有使用权
+  ~ 联系方式：E-mail:13638363871@163.com ;qq:502959937
+  ~ 个人博客主页：http://my.oschina.net/chenleijava
+  -->
+
+<booksConfig>
+    <!--itemType:1 装备 2.秘籍(技能书 神识书 功法书) 3.道具 -->
+    <!--type: 1（技能书1）,1（技能书2）,1（技能书3）,2（神识书）,3（功法书）,4（攻击法宝）
+    ,5（仙衣）,6（配饰）,7（挂件）,8（神识法宝） 9(丹药)，10（草药），11（矿石），12（材料），13（其他），
+       14（灵脉），15（蒲团），16（灵泉）参考资源中的图片描述 人物面板2.png-->
+	<!--skillID为空的填“0”，fiveType为0的表示五行属性为无-->
+    <!--五行属性编号-->
+    <!--金-> 木-> 土-> 水-> 火-->
+    <!--1    2    3    4    5-->
+
+	<books ID="22110001" iconID="22110001" skillID="22110001" name="四灵血咒" intro="献祭生灵发动的咒术，中招者会全身血液沸腾，直至死亡" type="1"
+           quality="1" subQuality="1" realmRequired="1" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="0" effectType1="0" effectNum1="0" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="16" itemType="2" groupID="0"/>
+
+	<books ID="22110002" iconID="22110002" skillID="22110002" name="玉净天华" intro="可暂时打通经脉，增加战斗力" type="1"
+           quality="1" subQuality="1" realmRequired="1" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="0" effectType1="0" effectNum1="0" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="17" itemType="2" groupID="0"/>
+
+	<books ID="22110003" iconID="22110003" skillID="22110003" name="万毒噬天" intro="可以让中招者免费体验一把万毒焚身，求死而不得的感觉" type="1"
+           quality="1" subQuality="1" realmRequired="4" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="0" effectType1="0" effectNum1="0" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="18" itemType="2" groupID="0"/>
+
+	<books ID="22110004" iconID="22110004" skillID="22110004" name="法海轮回" intro="法海大师说，送你去轮回" type="1"
+           quality="1" subQuality="1" realmRequired="4" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="0" effectType1="0" effectNum1="0" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="19" itemType="2" groupID="0"/>
+		     
+	<books ID="22110005" iconID="22110005" skillID="22110005" name="测试技能" intro="法海大师说，送你去轮回" type="1"
+           quality="1" subQuality="1" realmRequired="4" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="0" effectType1="0" effectNum1="0" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="19" itemType="2" groupID="0"/>	   
+
+	<books ID="22210001" iconID="22210001" skillID="" name="青灵功" intro="一位青灵上人自创的神识书" type="2"
+           quality="1" subQuality="1" realmRequired="1" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="0" effectType1="106" effectNum1="2" effectNumGrowUp1="0.5"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="22" itemType="2" groupID="0"/>
+
+	<books ID="22210002" iconID="22210002" skillID="" name="玄阴经" intro="从一个无恶不作的大魔头手上抢来的神识书" type="2"
+           quality="2" subQuality="2" realmRequired="1" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="0" effectType1="106" effectNum1="5" effectNumGrowUp1="1"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="23" itemType="2" groupID="0"/>
+
+	<books ID="22310001" iconID="22310001" skillID="" name="长春功" intro="木属性功法，修炼后可延年益寿，增加寿元" type="3"
+           quality="1" subQuality="1" realmRequired="1" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="1" effectType1="707" effectNum1="1000" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="25" itemType="2" groupID="1"/>
+
+	<books ID="22310002" iconID="22310002" skillID="" name="凝元功1" intro="金属性功法，从一个山洞中发现的功法" type="3"
+           quality="1" subQuality="1" realmRequired="1" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="2" effectType1="707" effectNum1="2000" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="26" itemType="2" groupID="1"/>
+
+	<books ID="22310003" iconID="22310002" skillID="" name="凝元功2" intro="金属性功法，从一个山洞中发现的功法" type="3"
+           quality="1" subQuality="1" realmRequired="1" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="2" effectType1="707" effectNum1="2000" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="26" itemType="2" groupID="2"/>
+
+	<books ID="22310004" iconID="22310002" skillID="" name="凝元功3" intro="金属性功法，从一个山洞中发现的功法" type="3"
+           quality="1" subQuality="1" realmRequired="2" nextRealmEquipID="" upgradeLevelMax="10"
+           suplySubQualityExp="14" showInBag="true" element="2" effectType1="707" effectNum1="2000" effectNumGrowUp1="0"
+           effectPercent1="0" effectPercentGrowUp1="0" effectType2="0" effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0" effectType3="0" effectNum3="0" effectNumGrowUp3="0"
+           effectPercent3="0" effectPercentGrowUp3="0" price="26" itemType="2" groupID="2"/>
+</booksConfig>

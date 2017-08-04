@@ -19,9 +19,8 @@ import com.koogame.util.Config;
 public class GameInit {
 	public static int serverId = 1; // 服务器标示
 	public static String confFileBasePath = "/csv/";// 配置文件根目录
-	public static Config cfg;// 读取server.properties配置
-	public static String templatePacket = "com.koogame.csv.model.";// xml模板类的位置
-	public static String dataConfig = "/dataConfig.xml";// xml位置
+	public static Config cfg;// 读取server.properties配置 
+	
 	private static final Logger logger = LoggerFactory
 			.getLogger(GameInit.class);
 	
@@ -54,7 +53,7 @@ public class GameInit {
 //			MorphiaUtil.buildDatastore();
 			// 加载CSV数据
 			logger.info("加载数据配置");
-			CsvDataLoader.getInstance(templatePacket, dataConfig).load();
+			CsvDataLoader.getInstance().load();
 			// 加载敏感词语
 			logger.info("加载敏感词语");
 //			SensitiveFilter.getInstance();

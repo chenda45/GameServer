@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2013.
+  ~ 游戏服务器核心代码编写人陈磊拥有使用权
+  ~ 联系方式：E-mail:13638363871@163.com ;qq:502959937
+  ~ 个人博客主页：http://my.oschina.net/chenleijava
+  -->
+
+<SkillXml>
+     <!--第一个技能作为默认赠送的-->
+    <!--itemType:1 装备 2.秘籍 3.道具 4.技能-->
+    <!--type: 1,1,1,2,3,4,5,6,7,8 参考资源中的图片描述 人物面板2.png-->
+	<!--skillID为空的填“0”，fiveType为0的表示五行属性为无-->
+    <!--第一个技能作为默认赠送的  elementNum环境五行需求值-->
+
+    <Skill ID="22110001" name="技能1" information="使目标损失31点气血"  type="1" maxLevel="20" reduceMagic="20" element="1" elementNum="20">
+    	<singleSkill skillType="1" effectNum="31" effectNumGrowUp="2" effectPercent="1" effectPercentGrowUp="" effectTime="" effectTimeGrowUp="" />
+    </Skill>
+
+    <Skill ID="22110002" name="技能2" information="使目标损失22点气血"  type="1" maxLevel="20" reduceMagic="14" element="2" elementNum="15">
+        <singleSkill skillType="1" effectNum="22" effectNumGrowUp="1.5" effectPercent="1" effectPercentGrowUp="" effectTime="" effectTimeGrowUp="1" />
+    </Skill>
+
+    <Skill ID="22110003" name="技能3" information="使目标损失42点气血"  type="1" maxLevel="20" reduceMagic="28" element="3" elementNum="50">
+        <singleSkill skillType="1" effectNum="42" effectNumGrowUp="3" effectPercent="1" effectPercentGrowUp="" effectTime="" effectTimeGrowUp="" />
+    </Skill>
+
+    <Skill ID="22110004" name="技能4" information="使目标损失84点气血"  type="1" maxLevel="20" reduceMagic="50" element="4" elementNum="100">
+        <singleSkill skillType="1" effectNum="84" effectNumGrowUp="5" effectPercent="1" effectPercentGrowUp="" effectTime="" effectTimeGrowUp="" />
+    </Skill>
+
+	<Skill ID="22110005" name="技能5" information="使目标损失100点气血"  type="1" maxLevel="20" reduceMagic="60" element="5" elementNum="120">
+        <singleSkill skillType="1" effectNum="100" effectNumGrowUp="5" effectPercent="1" effectPercentGrowUp="" effectTime="" effectTimeGrowUp="" />
+    </Skill>
+</SkillXml>

@@ -24,20 +24,15 @@ import com.koogame.start.GameInit;
  
 
 public class CsvDataLoader {
-	public static Logger logger = LoggerFactory.getLogger(CsvDataLoader.class);
-	private String packageName;
-	private String config; // 每一行就是一个配置文件名字
+	public static Logger logger = LoggerFactory.getLogger(CsvDataLoader.class); 
 	public static int ActivityMaxValue;
 	private static CsvDataLoader inst;
-
-	public CsvDataLoader(String packageName, String config) {
-		this.packageName = packageName;
-		this.config = config;
-	}
-
-	public static CsvDataLoader getInstance(String packageName, String config) {
+	public static String templatePacket = "com.koogame.csv.model.";// xml模板类的位置
+	public static String dataConfig = "/dataConfig.xml";// xml位置
+ 
+	public static CsvDataLoader getInstance() {
 		if (inst == null) {
-			inst = new CsvDataLoader(packageName, config);
+			inst = new CsvDataLoader();
 		}
 		return inst;
 	}
@@ -50,7 +45,7 @@ public class CsvDataLoader {
 		try {
 			logger.info("读取配置start");
 			Document doc = reader.read(new InputStreamReader(this.getClass()
-					.getResourceAsStream(this.config)));  
+					.getResourceAsStream(dataConfig)));  
 			List<?> nodes = doc.selectNodes("/config/file");
 			Map<String, List<?>> dataMap = new HashMap<String, List<?>>();
 			List<String> files = new LinkedList<String>();
@@ -104,7 +99,7 @@ public class CsvDataLoader {
 		CsvParser csvParser = new CsvParser(resourceAsStream);
 		List<String> nodes = csvParser.getListWithNoHeader();
 		// get clazz
-		String className = this.packageName + clzName;
+		String className = templatePacket + clzName;
 		try {
 			Class<?> classObject = Class.forName(className);
 			if (classObject == null) {
@@ -219,16 +214,5 @@ public class CsvDataLoader {
 		} else {
 			f.set(obj, f.getType().cast(v));
 		}
-	}
-
-	/**
-	 * Test Code
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		CsvDataLoader dl = new CsvDataLoader("com.hjc.herol.template.",
-				"/dataConfig.xml");
-		dl.load();
-	}
+	} 
 }

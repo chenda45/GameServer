@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2013.
+  ~ 游戏服务器核心代码编写人陈磊拥有使用权
+  ~ 联系方式：E-mail:13638363871@163.com ;qq:502959937
+  ~ 个人博客主页：http://my.oschina.net/chenleijava
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+      <!--more spring and memcached information  please see https://code.google.com/p/xmemcached/wiki/User_Guide_zh-->
+
+     <!--配置xmemcached客户端-->
+    <bean name="xMemcachedClientBuilder" class="net.rubyeye.xmemcached.XMemcachedClientBuilder">
+        <constructor-arg>
+            <list>
+                <bean class="java.net.InetSocketAddress">
+                    <constructor-arg value="${memcached.ip}"/>
+                    <constructor-arg value="${memcached.port}"/>
+                </bean>
+            </list>
+        </constructor-arg>
+
+        <!--config weight-->
+        <constructor-arg>
+            <array>
+                <value>${memcached.weight}</value>
+            </array>
+        </constructor-arg>
+        <property name="connectionPoolSize" value="1"/>
+        <property name="commandFactory">
+            <bean class="net.rubyeye.xmemcached.command.TextCommandFactory"/>
+        </property>
+
+        <property name="sessionLocator">
+            <bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator"/>
+        </property>
+
+           <!--通信编码方式-->
+        <property name="transcoder">
+            <bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder" />
+        </property>
+        <property name="name" value="landlordsServerCached"/>
+    </bean>
+    <bean name="memcachedClient" factory-bean="xMemcachedClientBuilder" factory-method="build" destroy-method="shutdown"/>
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2013.
+  ~ 游戏服务器核心代码编写人陈磊拥有使用权
+  ~ 联系方式：E-mail:13638363871@163.com ;qq:502959937
+  ~ 个人博客主页：http://my.oschina.net/chenleijava
+  -->
+
+<skillTypeXml>
+    <skillType ID="1" intro="直接伤害"/>
+    <skillType ID="2" intro="持续伤害" />
+    <skillType ID="3" intro="回法力盾" />
+    <skillType ID="4" intro="回蓝" />
+    <skillType ID="5" intro="增加攻击伤害" />
+    <skillType ID="6" intro="增加防御" />
+    <skillType ID="7" intro="以伤换伤" />
+    <skillType ID="8" intro="减少受到伤害" />
+    <skillType ID="9" intro="反弹受到伤害" />
+    <skillType ID="10" intro="昏迷" />
+</skillTypeXml>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ * Copyright (c) 2013.
+  ~  * 游戏服务器核心代码编写人陈磊拥有使用权
+  ~  * 联系方式：E-mail:13638363871@163.com ;qq:502959937
+  ~  * 个人博客主页：http://my.oschina.net/chenleijava
+  -->
+
+<!-- stateID(大境界编号) maxHoldCard（最大持牌数）maxGetCard（最大摸牌数） maxOutCard（最大出牌数量）-->
+<stateCardConfig>
+    <stateCard stateID="1" maxHoldCard="9" maxGetCard="4" maxOutCard="6" />
+    <stateCard stateID="2" maxHoldCard="4" maxGetCard="1" maxOutCard="3" />
+    <stateCard stateID="3" maxHoldCard="5" maxGetCard="2" maxOutCard="3" />
+    <stateCard stateID="4" maxHoldCard="6" maxGetCard="2" maxOutCard="4" />
+    <stateCard stateID="5" maxHoldCard="6" maxGetCard="3" maxOutCard="4" />
+    <stateCard stateID="6" maxHoldCard="7" maxGetCard="3" maxOutCard="5" />
+    <stateCard stateID="7" maxHoldCard="7" maxGetCard="4" maxOutCard="5" />
+    <stateCard stateID="8" maxHoldCard="8" maxGetCard="4" maxOutCard="6" />
+    <stateCard stateID="9" maxHoldCard="8" maxGetCard="4" maxOutCard="6" />
+    <stateCard stateID="10" maxHoldCard="9" maxGetCard="4" maxOutCard="6" />
+</stateCardConfig>

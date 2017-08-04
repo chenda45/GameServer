@@ -1,6 +1,8 @@
 package com.koogame.netty;
 
-import com.google.protobuf.MessageLite;
+ 
+import com.koogame.bean.Message;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
@@ -10,39 +12,18 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * 参考ProtobufVarint32LengthFieldPrepender 和 ProtobufEncoder
  */
 @Sharable
-public class NettyServerEncoder extends MessageToByteEncoder<MessageLite> {
-    
-     
-    @Override
-    protected void encode(
-            ChannelHandlerContext ctx, MessageLite msg, ByteBuf out) throws Exception {
+public class NettyServerEncoder extends MessageToByteEncoder<Message> {
 
-    	System.out.println("#####################encode");
-        byte[] body = msg.toByteArray();
-        byte[] header = encodeHeader(msg, (short)body.length);
-        
-        out.writeBytes(header);
-        out.writeBytes(body);
-        
-        return;
-    }
-    
-    private byte[] encodeHeader(MessageLite msg, short bodyLength) {
-        byte messageType = 0x0f;
-        
-//        if (msg instanceof StockTickOuterClass.StockTick) {
-//            messageType = 0x00;
-//        } else if (msg instanceof OptionTickOuterClass.OptionTick) {
-//            messageType = 0x01;
-//        }
-//        
-        byte[] header = new byte[4];
-        header[0] = (byte) (bodyLength & 0xff);
-        header[1] = (byte) ((bodyLength >> 8) & 0xff);
-        header[2] = 0; // 保留字段
-        header[3] = messageType;
-
-        return header;
-
-    }
+	@Override
+	protected void encode(ChannelHandlerContext ctx, Message msg, ByteBuf out)
+			throws Exception { 
+		
+		if(null == msg){
+            throw new Exception("msg is null");
+        } 
+        out.writeInt(msg.getTypeId()); 	//类型ID
+        out.writeInt(msg.getMsgId()); 	//消息ID
+        out.writeInt(msg.getLength()); 	//消息长度
+        out.writeBytes(msg.getBody());  //消息内容 
+	} 
 }

@@ -1,35 +1,38 @@
 package com.koogame.netty; 
 
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelHandler.Sharable;
-import io.netty.channel.ChannelHandlerContext; 
-import io.netty.channel.ChannelInboundHandlerAdapter; 
+import com.koogame.bean.Message; 
+import io.netty.channel.Channel; 
+import io.netty.channel.ChannelHandlerContext;  
+import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.util.concurrent.GlobalEventExecutor;
   
-public class NettyServerHandler extends ChannelInboundHandlerAdapter{ 
+public class NettyServerHandler extends SimpleChannelInboundHandler<Message>	{ 
 	
 	public static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
-	 
-    @Override
+	
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, Message msg)
+			throws Exception {
+		// TODO Auto-generated method stub
+		if (msg == null) {   
+            return;  
+        }  
+		System.out.println("-----------------channelRead0-----------------------"); 
+	} 
+	
+	
+	
+	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg)
 			throws Exception {
-    	try {
-            String body = (String) msg;
-            System.out.println("server receive msg : " + body);
- 
-            String respMsg = ""; 
-
-            ByteBuf resp = Unpooled.copiedBuffer(respMsg.getBytes());
-            ctx.writeAndFlush(resp);
-        }catch (Exception e){
-//        	ReferenceCountUtil.release(msg);
-            e.printStackTrace();
-        }
+		// TODO Auto-generated method stub
+		super.channelRead(ctx, msg);
+		System.out.println("-----------------msg channelRead-----------------------"); 
 	}
+
+
 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -68,6 +71,6 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter{
 //        channels.remove(ctx.channel());
     	
     	System.out.println("#############have one user come out##################");
-    }
+    } 
  
 }

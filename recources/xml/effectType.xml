@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effectTypeConfig>
+
+    <effectType ID="101" intro="穿戴增加攻击" />
+	<effectType ID="102" intro="穿戴增加防御" />
+	<effectType ID="103" intro="穿戴增加气血值上限" />
+	<effectType ID="104" intro="穿戴增加法术盾上限" />
+    <effectType ID="105" intro="穿戴增加法力值上限" />
+	<effectType ID="106" intro="穿戴增加神识值上限" />
+	<effectType ID="107" intro="穿戴增加气势值上限" />
+	<effectType ID="108" intro="穿戴增加气势值下限" />	
+
+
+
+
+	<effectType ID="201" intro="使用后增加攻击-回合" />
+	<effectType ID="202" intro="使用后增加防御-回合" />
+	<effectType ID="203" intro="使用后增加气血值上限-回合" />
+	<effectType ID="204" intro="使用后增加法术盾上限-回合" />
+	<effectType ID="205" intro="使用后增加法力值上限-回合" />
+	<effectType ID="206" intro="使用后增加战斗中的临时神识值-回合" />
+	<effectType ID="207" intro="使用后增加法力值回复速度-回合" />
+
+
+
+	
+	<effectType ID="301" intro="使用后增加攻击-时间" />
+	<effectType ID="302" intro="使用后增加防御-时间" />
+	<effectType ID="303" intro="使用后增加气血值上限-时间" />
+	<effectType ID="304" intro="使用后增加法术盾上限-时间" />
+	<effectType ID="305" intro="使用后增加法力值上限-时间" />
+	<effectType ID="306" intro="使用后增加神识值上限-时间" />
+	<effectType ID="307" intro="使用后增加功法可存储的灵气上限-时间" />
+	<effectType ID="308" intro="使用后增加蒲团转化灵气的转化率-时间" />	
+	<effectType ID="309" intro="使用后增加法力值回复速度-时间" />	
+	<effectType ID="310" intro="使用后增加所有物品（装备、秘籍、道具）掉落率-时间" />
+
+
+
+	<effectType ID="401" intro="使用后战斗中一次性增加气血值" />
+	<effectType ID="402" intro="使用后战斗中一次性增加法术盾" />
+	<effectType ID="403" intro="使用后战斗中一次性增加法力值" />
+	<effectType ID="404" intro="使用后战斗中一次性增加环境五行-金" />
+	<effectType ID="405" intro="使用后战斗中一次性增加环境五行-木" />
+	<effectType ID="406" intro="使用后战斗中一次性增加环境五行-土" />
+	<effectType ID="407" intro="使用后战斗中一次性增加环境五行-水" />
+	<effectType ID="408" intro="使用后战斗中一次性增加环境五行-火" />
+	<effectType ID="409" intro="使用后战斗中一次性增加气势值上限" />
+	<effectType ID="410" intro="使用后战斗中一次性增加气势值下限" />
+
+	
+	<effectType ID="501" intro="使用后一次性增加当前神识值" />
+	<effectType ID="502" intro="使用后一次性增加当前气运" />
+	<effectType ID="503" intro="使用后一次性增加灵石数量" />
+	<effectType ID="504" intro="使用后一次性增加仙玉数量" />	
+	<effectType ID="505" intro="使用后一次性增加人物灵气值" />
+
+	
+	<effectType ID="601" intro="使用后永久增加攻击" />
+	<effectType ID="602" intro="使用后永久增加防御" />
+	<effectType ID="603" intro="使用后永久增加气血值上限" />
+	<effectType ID="604" intro="使用后永久增加法术盾上限" />
+	<effectType ID="605" intro="使用后永久增加法力值上限" />
+	<effectType ID="606" intro="使用后永久增加神识值上限" />
+
+
+    <!--神识法宝 装备类-->
+    <effectType ID="701" intro="穿戴后使用神牌增加眩晕概率"/>
+	<effectType ID="702" intro="穿戴后使用神牌增加以伤换伤概率" />	
+	<effectType ID="703" intro="穿戴后使用神牌增加秒杀概率" />
+
+
+    <!--精舍 灵脉 灵泉 蒲团-->
+	<effectType ID="704" intro="穿戴后每分钟产出灵气值" />		
+	<effectType ID="705" intro="穿戴后灵泉能产出的灵气上限" />	
+	<effectType ID="706" intro="穿戴后增加产出的灵气的转化率-产出的灵气马上转化，无时间延迟" />
+
+
+    <!--立马改变对象属性 秘籍类-->
+    <effectType ID="707" intro="穿戴后增加功法可存储的灵气上限" />
+
+
+</effectTypeConfig>

@@ -8,8 +8,7 @@ import net.rubyeye.xmemcached.exception.MemcachedException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-@Service(value = "MemcachedUtil")
+ 
 public class MemcachedUtil {
 
 	private Logger log = Logger.getLogger(MemcachedUtil.class); 
