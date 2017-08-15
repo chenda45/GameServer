@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- skillID为空的填“0”，fiveType为0的表示五行属性为无-->
+
+<monsterConfig>
+    <!--五行属性编号-->
+    <!--金-> 木-> 土-> 水-> 火-->
+    <!--1    2    3    4    5-->
+
+    <monster  ID="1" monsterName="张铁" monsterMaxBlood="1" monsterMaxMagic="20" monsterRecoveryMagic="2" skillID1="22110002" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="20" monsterAttack="10" monsterDefence="0" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="10"  fiveType="5" FangreduceMagic="3" Fangrecoverysheild="3" 
+	                  information="金糊涂银糊涂，比不上咱" />
+
+	<monster  ID="2" monsterName="厉飞雨" monsterMaxBlood="1" monsterMaxMagic="30" monsterRecoveryMagic="3" skillID1="22110002" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="20" monsterAttack="12" monsterDefence="1" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="10"  fiveType="1" FangreduceMagic="3" Fangrecoverysheild="5" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂"/>
+
+	<monster  ID="3" monsterName="墨大夫" monsterMaxBlood="1" monsterMaxMagic="40" monsterRecoveryMagic="4" skillID1="22110002" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="25" monsterAttack="15" monsterDefence="2" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="10"  fiveType="2" FangreduceMagic="3" Fangrecoverysheild="6" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="4" monsterName="余子童" monsterMaxBlood="1" monsterMaxMagic="50" monsterRecoveryMagic="5" skillID1="22110002" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="30" monsterAttack="17" monsterDefence="3" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="3" FangreduceMagic="3" Fangrecoverysheild="7" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="5" monsterName="神秘男子" monsterMaxBlood="1" monsterMaxMagic="50" monsterRecoveryMagic="5" skillID1="22110002" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="35" monsterAttack="20" monsterDefence="4" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="4" FangreduceMagic="3" Fangrecoverysheild="8" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="6" monsterName="铁枪会员" monsterMaxBlood="1" monsterMaxMagic="50" monsterRecoveryMagic="5" skillID1="22110002" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="40" monsterAttack="22" monsterDefence="5" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="5" FangreduceMagic="4" Fangrecoverysheild="9" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="7" monsterName="断水门徒" monsterMaxBlood="1" monsterMaxMagic="50" monsterRecoveryMagic="5" skillID1="22110002" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="50" monsterAttack="24" monsterDefence="6" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="4" FangreduceMagic="5" Fangrecoverysheild="10" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="8" monsterName="野狼帮众1" monsterMaxBlood="1" monsterMaxMagic="60" monsterRecoveryMagic="6" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="60" monsterAttack="27" monsterDefence="7" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="3" FangreduceMagic="6" Fangrecoverysheild="12" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="9" monsterName="野狼帮众2" monsterMaxBlood="1" monsterMaxMagic="60" monsterRecoveryMagic="6" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="70" monsterAttack="30" monsterDefence="8" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="2" FangreduceMagic="7" Fangrecoverysheild="12" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="10" monsterName="野狼帮众3" monsterMaxBlood="1" monsterMaxMagic="60" monsterRecoveryMagic="8" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="80" monsterAttack="35" monsterDefence="9" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="1" FangreduceMagic="8" Fangrecoverysheild="12" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="11" monsterName="野狼帮众4" monsterMaxBlood="1" monsterMaxMagic="60" monsterRecoveryMagic="8" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="90" monsterAttack="38" monsterDefence="10" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="2" FangreduceMagic="9" Fangrecoverysheild="12" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="12" monsterName="红衣铁卫1" monsterMaxBlood="1" monsterMaxMagic="80" monsterRecoveryMagic="9" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="100" monsterAttack="39" monsterDefence="11" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="3" FangreduceMagic="10" Fangrecoverysheild="15" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="13" monsterName="红衣铁卫2" monsterMaxBlood="1" monsterMaxMagic="80" monsterRecoveryMagic="10" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="110" monsterAttack="41" monsterDefence="12" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="4" FangreduceMagic="10" Fangrecoverysheild="15" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="14" monsterName="红衣铁卫3" monsterMaxBlood="1" monsterMaxMagic="100" monsterRecoveryMagic="10" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="120" monsterAttack="43" monsterDefence="13" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="5" FangreduceMagic="10" Fangrecoverysheild="15" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="15" monsterName="贾天龙" monsterMaxBlood="1" monsterMaxMagic="110" monsterRecoveryMagic="10" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="130" monsterAttack="45" monsterDefence="14" monsterBaseMinMomentum="1"
+	                  monsterBaseMaxMomentum="6"  monsterMaxSual="12"  fiveType="0" FangreduceMagic="12" Fangrecoverysheild="15" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="16" monsterName="金光上人" monsterMaxBlood="1" monsterMaxMagic="200" monsterRecoveryMagic="20" skillID1="22110001" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="180" monsterAttack="55" monsterDefence="15" monsterBaseMinMomentum="2"
+	                  monsterBaseMaxMomentum="7"  monsterMaxSual="15"  fiveType="1" FangreduceMagic="15" Fangrecoverysheild="17" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+	<monster  ID="17" monsterName="影猫" monsterMaxBlood="1" monsterMaxMagic="300" monsterRecoveryMagic="25" skillID1="22110003" skillID2="0" skillID3="0"
+	                  monsterMaxShiled="500" monsterAttack="54" monsterDefence="25" monsterBaseMinMomentum="2"
+	                  monsterBaseMaxMomentum="7"  monsterMaxSual="12"  fiveType="2" FangreduceMagic="15" Fangrecoverysheild="13" 
+	                  information="金糊涂银糊涂，比不上咱家的老糊涂" >
+	</monster>
+</monsterConfig>

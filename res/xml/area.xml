@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2013.
+  ~ 游戏服务器核心代码编写人陈磊拥有使用权
+  ~ 联系方式：E-mail:13638363871@163.com ;qq:502959937
+  ~ 个人博客主页：http://my.oschina.net/chenleijava
+  -->
+
+<areaConfig>
+	<area ID="1" name="灵尊殿" intro="灵尊殿" />
+    <area ID="2" name="灵御城" intro="灵御城" />
+    <area ID="3" name="欲火幽城" intro="欲火幽城" />
+    <area ID="4" name="嘉园城" intro="嘉园城" />
+    <area ID="5" name="阴虚灵麦" intro="阴虚灵麦" />
+</areaConfig>

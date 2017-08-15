@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipConfig>
+    <!--itemType:1 装备 2.秘籍 3.道具-->
+    <!--type:
+         1（技能1）,1（技能2）,1（技能3）,2（神识书）,3（功法）,4（攻击法宝）,5（仙衣）,6（配饰）,7（挂件）,8（神识法宝）
+
+         9(丹药)，10（草药），11（矿石），12（材料），13（其他），
+
+         14（灵脉），15（灵泉），15（灵泉），15（灵泉），15（灵泉） ，   16（蒲团）
+         -->
+
+
+    <equip ID="11110001" iconID="11110001" name="黑血刀"
+           iintro="染满了鲜血的刀，煞气很重" type="4" quality="1"
+           subQuality="1" realmRequired="" nextRealmEquipID=""
+           upgradeLevelMax="10"  suplySubQualityExp="15"
+           showInBag="true" effectType1="101" effectNum1="5"
+           effectNumGrowUp1="1" effectPercent1="0"
+           effectPercentGrowUp1="0" effectType2="0"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0"
+           effectType3="0" effectNum3="0"
+           effectNumGrowUp3="0" effectPercent3="0"
+           effectPercentGrowUp3="0" price="11" itemType="1"/>
+
+    <equip ID="11110002" iconID="11110002" name="贯日剑"
+           intro="看起来很漂亮的一把剑" type="4" quality="1"
+           subQuality="1" realmRequired="" nextRealmEquipID=""
+           upgradeLevelMax="10"  suplySubQualityExp="15"
+           showInBag="true" effectType1="101" effectNum1="10"
+           effectNumGrowUp1="1" effectPercent1="0"
+           effectPercentGrowUp1="0" effectType2="0"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0" effectPercentGrowUp2="0"
+           effectType3="0" effectNum3="0"
+           effectNumGrowUp3="0" effectPercent3="0"
+           effectPercentGrowUp3="0" price="12" itemType="1"/>
+
+    <equip ID="11210001" iconID="11210001" name="隐灵纱"
+           intro="纱衣哦~~仙女的纱衣哦~" type="5" quality="1"
+           subQuality="1" realmRequired="1" nextRealmEquipID=""
+           upgradeLevelMax="10"  suplySubQualityExp="12"
+           showInBag="true" effectType1="102" effectNum1="2"
+           effectNumGrowUp1="1" effectPercent1="0"
+           effectPercentGrowUp1="0" effectType2="0"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="" effectPercentGrowUp2="0"
+           effectType3="0" effectNum3="0"
+           effectNumGrowUp3="0" effectPercent3="0"
+           effectPercentGrowUp3="0" price="21" itemType="1"/>
+
+    <equip ID="11210002" iconID="11210002" name="白鳞甲"
+           intro="穿上白鳞甲，走遍天下都不怕" type="5" quality="1"
+           subQuality="1" realmRequired="1" nextRealmEquipID=""
+           upgradeLevelMax="10"  suplySubQualityExp="12"
+           showInBag="true" effectType1="102" effectNum1="5"
+           effectNumGrowUp1="1" effectPercent1="0"
+           effectPercentGrowUp1="0" effectType2="0"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="" effectPercentGrowUp2="0"
+           effectType3="0" effectNum3="0"
+           effectNumGrowUp3="0" effectPercent3="0"
+           effectPercentGrowUp3="0" price="22" itemType="1"/>
+
+    <equip ID="11310001" iconID="11310001" name="玄阴环"
+           intro="筑基期前辈曾经佩戴过的手环" type="6" quality="1"
+           subQuality="1" realmRequired="1" nextRealmEquipID=""
+           upgradeLevelMax="10"  suplySubQualityExp="10"
+           showInBag="true" effectType1="105" effectNum1="10"
+           effectNumGrowUp1="1" effectPercent1="0"
+           effectPercentGrowUp1="0" effectType2="0"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="" effectPercentGrowUp2="0"
+           effectType3="0" effectNum3="0"
+           effectNumGrowUp3="0" effectPercent3="0"
+           effectPercentGrowUp3="0" price="31" itemType="1"/>
+
+    <equip ID="11310002" iconID="11310002" name="纹龙戒"
+           intro="用龙角制成的戒指，坚硬无比" type="6" quality="1"
+           subQuality="1" realmRequired="1" nextRealmEquipID=""
+           upgradeLevelMax="10"  suplySubQualityExp="10"
+           showInBag="true" effectType1="105" effectNum1="20"
+           effectNumGrowUp1="1" effectPercent1="0"
+           effectPercentGrowUp1="0" effectType2="0"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="" effectPercentGrowUp2="0"
+           effectType3="0" effectNum3="0"
+           effectNumGrowUp3="0" effectPercent3="0"
+           effectPercentGrowUp3="0" price="32" itemType="1"/>
+
+    <equip ID="11410001" iconID="11410001" name="白犀佩"
+           intro="佩戴后自动有法术盾护体，效果杠杠的" type="7" quality="1"
+           subQuality="1" realmRequired="1" nextRealmEquipID=""
+           upgradeLevelMax="10"  suplySubQualityExp="8"
+           showInBag="true" effectType1="104" effectNum1="10"
+           effectNumGrowUp1="1" effectPercent1="0"
+           effectPercentGrowUp1="0" effectType2="0"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="" effectPercentGrowUp2="0"
+           effectType3="0" effectNum3="0"
+           effectNumGrowUp3="0" effectPercent3="0"
+           effectPercentGrowUp3="0" price="41" itemType="1"/>
+
+    <equip ID="11410002" iconID="11410002" name="寒黎珠"
+           intro="寒黎兽的内丹做成的配饰，可抵御寒气" type="7" quality="1"
+           subQuality="1" realmRequired="1" nextRealmEquipID=""
+           upgradeLevelMax="10"  suplySubQualityExp="8"
+           showInBag="true" effectType1="104" effectNum1="20"
+           effectNumGrowUp1="1" effectPercent1="0"
+           effectPercentGrowUp1="0" effectType2="0"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="" effectPercentGrowUp2="0"
+           effectType3="0" effectNum3="0"
+           effectNumGrowUp3="0" effectPercent3="0"
+           effectPercentGrowUp3="0" price="42" itemType="1"/>
+
+    <equip ID="11510001" iconID="11510001" name="青凝镜"
+           intro="杀人臭美，居家旅行之必备" type="8" quality="1"
+           subQuality="1" realmRequired="1" nextRealmEquipID="2"
+           upgradeLevelMax="10"  suplySubQualityExp="100"
+           showInBag="true" effectType1="701" effectNum1=""
+           effectNumGrowUp1="" effectPercent1="0.05"
+           effectPercentGrowUp1="1" effectType2="702"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0.1" effectPercentGrowUp2="1"
+           effectType3="703" effectNum3=""
+           effectNumGrowUp3="0" effectPercent3="0.02"
+           effectPercentGrowUp3="1" price="51" itemType="1"/>
+
+    <equip ID="11510002" iconID="11510002" name="迷幻砚"
+           intro="别以为这个是普通的砚台，威力很猛的哦" type="8" quality="1"
+           subQuality="1" realmRequired="1" nextRealmEquipID="2"
+           upgradeLevelMax="10"  suplySubQualityExp="100"
+           showInBag="true" effectType1="701" effectNum1=""
+           effectNumGrowUp1="" effectPercent1="0.1"
+           effectPercentGrowUp1="1" effectType2="702"
+           effectNum2="0" effectNumGrowUp2="0"
+           effectPercent2="0.15" effectPercentGrowUp2="1"
+           effectType3="703" effectNum3=""
+           effectNumGrowUp3="0" effectPercent3="0.05"
+           effectPercentGrowUp3="1" price="52" itemType="1"/>
+
+</equipConfig>

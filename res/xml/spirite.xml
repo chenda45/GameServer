@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ * Copyright (c) 2013.
+  ~  * 游戏服务器核心代码编写人陈磊拥有使用权
+  ~  * 联系方式：E-mail:13638363871@163.com ;qq:502959937
+  ~  * 个人博客主页：http://my.oschina.net/chenleijaa
+  -->
+<!--type:
+1（技能1）,1（技能2）,1（技能3）,2（神识书）,3（功法）,4（攻击法宝）,5（仙衣）,6（配饰）,7（挂件）,8（神识法宝）
+9(丹药)，10（草药），11（矿石），12（材料），13（其他），
+14（灵脉），15（灵泉），15（灵泉），15（灵泉），15（灵泉） ，   16（蒲团）
+若玩家有更好的灵脉、蒲团后，将属性值低的灵脉、蒲团换下来后，自动销毁；当灵泉中的灵气总量为0时，自动销毁-->
+
+<spiritConfig>
+    <spirit ID="11610001" iconID="11610001" name="灵脉1" intro="吸收天地之灵气" type="14" quality="1"
+            subQuality="1" realmRequired="1" spirutMaxlimit="" spiritPerMinuteCreat="800" spiritTransifer="0" itemType="4"/>
+
+    <spirit ID="11610002" iconID="11610002" name="灵脉2" intro="吸收天地之灵气" type="14" quality="1"
+            subQuality="1" realmRequired="1" spirutMaxlimit="0" spiritPerMinuteCreat="1000" spiritTransifer="0" itemType="4"/>
+
+    <spirit ID="11610003" iconID="11610003" name="灵脉3" intro="吸收天地之灵气" type="14" quality="2"
+            subQuality="1" realmRequired="1" spirutMaxlimit="0" spiritPerMinuteCreat="5000" spiritTransifer="0" itemType="4"/>
+
+
+
+    <spirit ID="11710001" iconID="11710001" name="灵泉1" intro="吸收天地之灵气" type="15" quality="1"
+            subQuality="1" realmRequired="1" spirutMaxlimit="1000" spiritPerMinuteCreat="250" spiritTransifer="0" itemType="4"/>
+
+    <spirit ID="11710002" iconID="11710002" name="灵泉2" intro="吸收天地之灵气" type="15" quality="1"
+            subQuality="1" realmRequired="1" spirutMaxlimit="1050" spiritPerMinuteCreat="260" spiritTransifer="0" itemType="4"/>
+
+    <spirit ID="11710003" iconID="11710003" name="灵泉3" intro="吸收天地之灵气" type="15" quality="1"
+            subQuality="1" realmRequired="1" spirutMaxlimit="1100" spiritPerMinuteCreat="270" spiritTransifer="0" itemType="4"/>
+
+    <spirit ID="11710004" iconID="11710004" name="灵泉4" intro="吸收天地之灵气" type="15" quality="2"
+            subQuality="1" realmRequired="1" spirutMaxlimit="1500" spiritPerMinuteCreat="490" spiritTransifer="0" itemType="4"/>
+
+    <spirit ID="11710005" iconID="11710005" name="灵泉5" intro="吸收天地之灵气" type="15" quality="3"
+            subQuality="1" realmRequired="1" spirutMaxlimit="2500" spiritPerMinuteCreat="900" spiritTransifer="0" itemType="4"/>
+
+
+
+    <spirit ID="11810001" iconID="11810001" name="蒲团1" intro="吸收天地之灵气" type="16" quality="1"
+            subQuality="1" realmRequired="1" spirutMaxlimit="0" spiritPerMinuteCreat="0" spiritTransifer="0.1" itemType="4"/>
+
+    <spirit ID="11810002" iconID="11810002" name="蒲团2" intro="吸收天地之灵气" type="16" quality="1"
+            subQuality="1" realmRequired="1" spirutMaxlimit="0" spiritPerMinuteCreat="" spiritTransifer="0.2" itemType="4"/>
+
+    <spirit ID="11810003" iconID="11810003" name="蒲团3" intro="吸收天地之灵气" type="16" quality="2"
+            subQuality="1" realmRequired="1" spirutMaxlimit="0" spiritPerMinuteCreat="0" spiritTransifer="0.5" itemType="4"/>
+
+</spiritConfig>

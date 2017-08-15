@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<levelUnlockTypeConfig>
+	<unlockType ID="1" intro="指定关卡通关" />
+</levelUnlockTypeConfig>

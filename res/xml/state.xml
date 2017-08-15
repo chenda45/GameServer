@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ * Copyright (c) 2013.
+  ~  * 游戏服务器核心代码编写人陈磊拥有使用权
+  ~  * 联系方式：E-mail:13638363871@163.com ;qq:502959937
+  ~  * 个人博客主页：http://my.oschina.net/chenleijava
+  -->
+
+<!--境界配置文件 ID自增长（境界唯一区分编号）  bigStateID:大境界编号（1~10）,smallStateID(1~10) 气血值，法力值，法力盾，攻击，防御，神识值,基础气势值下限，基础气势值上限，下限=minMomentum
+
+默认开始大境界1中的第一个小境界   服务器记录角色当前的境界
+-->
+<stateConfig>
+
+    <!--大境界为 1 ，小境界为 1~10    -->
+    <state ID="1" smallStateID="1" bigStateID="1" blood="1" magic="100" sheild="100" attack="20" defence="10" soul="10" baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="1000"/>
+    <state ID="2" smallStateID="2" bigStateID="1" blood="1" magic="105" sheild="105" attack="22" defence="12" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="1500"/>
+    <state ID="3" smallStateID="3" bigStateID="1" blood="1" magic="110" sheild="110" attack="24" defence="14" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="2500"/>
+    <state ID="4" smallStateID="4" bigStateID="1" blood="1" magic="115" sheild="115" attack="26" defence="16" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="3800"/>
+    <state ID="5" smallStateID="5" bigStateID="1" blood="1" magic="120" sheild="120" attack="28" defence="18" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="4200"/>
+    <state ID="6" smallStateID="6" bigStateID="1" blood="1" magic="125" sheild="125" attack="30" defence="20" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="5800"/>
+    <state ID="7" smallStateID="7" bigStateID="1" blood="1" magic="130" sheild="130" attack="32" defence="22" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="7500"/>
+    <state ID="8" smallStateID="8" bigStateID="1" blood="1" magic="135" sheild="135" attack="34" defence="24" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="9000"/>
+    <state ID="9" smallStateID="9" bigStateID="1"  blood="1" magic="140" sheild="140" attack="36" defence="26" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="11000"/>
+    <state ID="10" smallStateID="10" bigStateID="1" blood="1" magic="145" sheild="145" attack="38" defence="28" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="6" FangreduceMagic="15" Fangrecoverysheild="10" spiritRequired="15000"/>
+
+
+
+
+    <!--大境界 2，小境界为 1~10    -->
+    <state ID="11" smallStateID="1" bigStateID="2" blood="1" magic="100" sheild="100" attack="20" defence="10" soul="10" baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="21" Fangrecoverysheild="40" spiritRequired="20000"/>
+    <state ID="12" smallStateID="2" bigStateID="2" blood="1" magic="105" sheild="105" attack="22" defence="12" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="22" Fangrecoverysheild="42" spiritRequired="30000"/>
+    <state ID="13" smallStateID="3" bigStateID="2" blood="1" magic="110" sheild="110" attack="24" defence="14" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="23" Fangrecoverysheild="44" spiritRequired="42000"/>
+    <state ID="14" smallStateID="4" bigStateID="2" blood="1" magic="115" sheild="115" attack="26" defence="16" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="24" Fangrecoverysheild="46" spiritRequired="57000"/>
+    <state ID="15" smallStateID="5" bigStateID="2" blood="1" magic="120" sheild="120" attack="28" defence="18" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="25" Fangrecoverysheild="48" spiritRequired="72000"/>
+    <state ID="16" smallStateID="6" bigStateID="2" blood="1" magic="125" sheild="125" attack="30" defence="20" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="26" Fangrecoverysheild="50" spiritRequired="98000"/>
+    <state ID="17" smallStateID="7" bigStateID="2" blood="1" magic="130" sheild="130" attack="32" defence="22" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="27" Fangrecoverysheild="52" spiritRequired="110000"/>
+    <state ID="18" smallStateID="8" bigStateID="2" blood="1" magic="135" sheild="135" attack="34" defence="24" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="28" Fangrecoverysheild="54" spiritRequired="130000"/>
+    <state ID="19" smallStateID="9" bigStateID="2"  blood="1" magic="140" sheild="140" attack="36" defence="26" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="29" Fangrecoverysheild="56" spiritRequired="150000"/>
+    <state ID="20" smallStateID="10" bigStateID="2" blood="1" magic="145" sheild="145" attack="38" defence="28" soul="10"  baseminMomentum="1" basemaxMomentum="6" roleSualRecovery="1" rolerecoverymagic="10" FangreduceMagic="30" Fangrecoverysheild="58" spiritRequired="190000"/>
+
+
+
+</stateConfig>

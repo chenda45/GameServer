@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <!--  jredis 客户端 连接池配置  可以配置主从-->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig"> 
+        <property name="maxIdle"       value="${redis.pool.maxIdle}" />  
+    </bean>
+
+
+    <!--public JedisShardInfo(String host, int port, int timeout, int weight) {-->
+    <!--super(weight);-->
+    <!--this.host = host;-->
+    <!--this.port = port;-->
+    <!--this.timeout = timeout;-->
+    <!--}-->
+
+    <!--  多个缓存服务器配置-->
+    <!--<bean id="jedisShardInfoMaster" class="redis.clients.jedis.JedisShardInfo">-->
+        <!--<constructor-arg index="0" value="${redis-master.ip}" />-->
+        <!--<constructor-arg index="1" value="${redis-master.port}" type="int" />-->
+    <!--</bean>-->
+
+    <!--<bean id="jedisShardInfoSlave" class="redis.clients.jedis.JedisShardInfo">-->
+        <!--<constructor-arg index="0" value="${redis-slave.ip}" />-->
+        <!--<constructor-arg index="1" value="${redis-slave.port}" type="int" />-->
+    <!--</bean>-->
+
+
+    <!--<bean id="shardedJedisPool" class="redis.clients.jedis.ShardedJedisPool">-->
+        <!--<constructor-arg index="0" ref="jedisPoolConfig" />-->
+        <!--<constructor-arg index="1">-->
+            <!--<list>-->
+                <!--<ref bean="jedisShardInfoMaster" />-->
+                <!--<ref bean="jedisShardInfoSlave"/>-->
+            <!--</list>-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
+
+
+    <!-- 将jredis客户端和spring集成 ，通过spring来管理  JedisConnectionFactory针对jredis 封装-->
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="hostName"   value="${redis-master.ip}" />
+        <property name="port"       value="${redis-master.port}" />
+        <property name="poolConfig" ref="jedisPoolConfig" />
+        <!--<property name="shardInfo" ref="jedisShardInfoMaster"  />-->
+    </bean>
+
+
+    <!--spring 操作redis句柄-->
+    <bean id="redisTemplate"  class="org.springframework.data.redis.core.RedisTemplate">
+        <property name="connectionFactory" ref="jedisConnectionFactory"/>
+        <!--<property name="defaultSerializer" value="org.springframework.data.redis.serializer.JacksonJsonRedisSerializer"/>-->
+    </bean>
+
+    <!--string redis template-->
+    <bean id="stringRedisTemplate"  class="org.springframework.data.redis.core.StringRedisTemplate">
+        <property name="connectionFactory" ref="jedisConnectionFactory"/>
+    </bean>
+
+</beans>
+
+
+

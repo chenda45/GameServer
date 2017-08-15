@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="false" monitoring="autodetect"
+         dynamicConfig="true">
+
+    <diskStore path="./ehcache"/>
+
+
+     <!--config memory store-->
+
+
+
+    <!--角色信息表-->
+    <cache name="role"
+           maxElementsInMemory="5000"
+           eternal="false"   overflowToDisk="false"
+           timeToIdleSeconds="0"   timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LRU" />
+
+    <!--&lt;!&ndash;角色任务列表 ，离线从缓存中移除&ndash;&gt;-->
+    <!--<cache name="role_task"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU"/>-->
+
+    <!--&lt;!&ndash;角色道具购买记录表,用于提供玩家的购买信息显示处理，当玩家上线加载-->
+    <!--，离线清除缓存-->
+    <!--&ndash;&gt;-->
+    <!--<cache name="M_Props_record"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+
+    <!--&lt;!&ndash;角色道具购买记录表,用于定时向数据库中插入购买的记录信息定时更新之后会被clear&ndash;&gt;-->
+    <!--<cache name="buy_Props_record"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+
+    <!--&lt;!&ndash;角色道具：喇叭，表情，记牌器，VIP等 定时更新之后会被clear&ndash;&gt;-->
+    <!--<cache name="buy_props"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+    <!--<cache name="M_props"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+
+    <!--&lt;!&ndash;system 排行榜数据，在更新排行榜数据时，缓存被更新&ndash;&gt;-->
+    <!--&lt;!&ndash;金币榜&ndash;&gt;-->
+    <!--<cache name="gold"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+
+    <!--&lt;!&ndash;赚金榜&ndash;&gt;-->
+    <!--<cache name="gaingold"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+
+    <!--&lt;!&ndash;充值榜&ndash;&gt;-->
+    <!--<cache name="charge"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+    <!--&lt;!&ndash;冠军榜&ndash;&gt;-->
+    <!--<cache name="chapion"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+
+    <!--图片头像资源-->
+    <!--<cache name="pic"-->
+           <!--maxElementsInMemory="5000"-->
+           <!--eternal="false"   overflowToDisk="false"-->
+           <!--timeToIdleSeconds="0"   timeToLiveSeconds="0"-->
+           <!--memoryStoreEvictionPolicy="LRU" />-->
+
+
+</ehcache>
+
+
+
