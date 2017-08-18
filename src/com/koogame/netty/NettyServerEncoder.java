@@ -1,7 +1,7 @@
 package com.koogame.netty;
 
  
-import com.koogame.bean.Message;
+import com.koogame.model.Message;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler.Sharable;

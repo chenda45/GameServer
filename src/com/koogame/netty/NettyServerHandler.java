@@ -1,6 +1,10 @@
 package com.koogame.netty; 
+ 
+import com.koogame.controller.MainController;
+import com.koogame.model.Message;
+import com.koogame.model.Player;
+import com.koogame.start.launcher;
 
-import com.koogame.bean.Message; 
 import io.netty.channel.Channel; 
 import io.netty.channel.ChannelHandlerContext;  
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -10,23 +14,30 @@ import io.netty.util.concurrent.GlobalEventExecutor;
   
 public class NettyServerHandler extends SimpleChannelInboundHandler<Message>	{ 
 	
-	public static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
+	public static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);  
+	
+	//总控制器
+	private MainController mainController;
+	//玩家数据
+	private Player player;
 	
 	@Override
 	protected void channelRead0(ChannelHandlerContext ctx, Message msg)
-			throws Exception {
-		// TODO Auto-generated method stub
+			throws Exception { 
 		if (msg == null) {   
             return;  
         }  
-		Channel incoming = ctx.channel();
-		incoming.writeAndFlush(msg);
+		mainController.DispatchMessage(msg,player); 
+		
 	} 
 	 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		// TODO Auto-generated method stub
 		super.channelActive(ctx);
+		player = (Player)launcher.springContext.getBean("player");
+		player.setChannel(ctx.channel());
+		mainController = (MainController)launcher.springContext.getBean("mainController");
 		System.out.println("-----------------user come-----------------------");
 	} 
 	
@@ -61,5 +72,5 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message>	{
     	
     	System.out.println("#############have one user come out##################");
     } 
- 
+     
 }

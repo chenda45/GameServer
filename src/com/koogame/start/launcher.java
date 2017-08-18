@@ -1,13 +1,17 @@
  
 package com.koogame.start;
   
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
-import com.koogame.baseConfig.Config;
+import com.koogame.baseConfig.Config; 
+import com.koogame.model.Player;
 import com.koogame.netty.ServerServiceImpl;
 
 import javax.annotation.Resource;
@@ -25,6 +29,10 @@ import javax.annotation.Resource;
 public class launcher {
 
     private static final Logger LOG = LoggerFactory.getLogger(launcher.class);
+    
+    public static BeanFactory springContext;
+    
+    public static Map<Integer,Player> playerMap = new ConcurrentHashMap<Integer,Player>();
 
 
     @Resource
@@ -38,7 +46,7 @@ public class launcher {
             BeanFactory springContext = new FileSystemXmlApplicationContext(Config.DEFAULT_VALUE.FILE_PATH.SPRING_CONFIG_PATH);
             launcher gameServer = (launcher) springContext.getBean("gameServer");
             /**set  spring context**/
-//            ServerHandler.setSpringContext(springContext);
+            launcher.springContext = springContext;
 
             /**初始化配置文件，启动通信层*/
             gameServer.serverService.IntiServer();

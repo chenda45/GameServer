@@ -1,9 +1,14 @@
-package com.koogame.bean;
+package com.koogame.model;
 
 import java.io.Serializable;
 
+import org.springframework.context.annotation.Scope; 
+import org.springframework.stereotype.Service;
+
 import com.google.protobuf.MessageLite;
 
+@Service("message")
+@Scope("prototype")
 public class Message implements Serializable{
 	
 	/**

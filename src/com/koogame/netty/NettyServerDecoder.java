@@ -1,25 +1,14 @@
 package com.koogame.netty;
 
-
-import java.nio.ByteOrder;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.koogame.bean.Message;
-import com.koogame.protocol.MsgProtocol;
-import com.koogame.protocol.MsgProtocol.Person;
+ 
+import com.koogame.model.Message;
+import com.koogame.start.launcher;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 
-public class NettyServerDecoder extends LengthFieldBasedFrameDecoder {
-    
-    //判断传送客户端传送过来的数据是否按照协议传输，头部信息的大小应该是 byte+byte+int = 1+1+4 = 6
-	private static final int HEADER_SIZE = 6;  
-	
-    @Autowired
-	public Message message;
+public class NettyServerDecoder extends LengthFieldBasedFrameDecoder { 
     
     /** 
      *  
@@ -37,7 +26,7 @@ public class NettyServerDecoder extends LengthFieldBasedFrameDecoder {
 	@Override
     protected Object decode(ChannelHandlerContext ctx, ByteBuf in) throws Exception {
 		
-		Message message = new Message();
+		Message message = (Message)launcher.springContext.getBean("message");
         message.setTypeId(in.readInt()); 
         message.setMsgId(in.readInt()); 
         message.setLength(in.readInt()); 
@@ -46,15 +35,5 @@ public class NettyServerDecoder extends LengthFieldBasedFrameDecoder {
         message.setBody(data); 
     
         return message;
-    }
-
-	public Message getMessage() {
-		return message;
-	}
-
-	public void setMessage(Message message) {
-		this.message = message;
-	}
-	 
-
+    } 
 }
